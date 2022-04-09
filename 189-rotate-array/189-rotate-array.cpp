@@ -4,17 +4,17 @@ public:
         while(low<high){
             swap(num[low],num[high]);
                 low++;
-            high--;
+                high--;
         }
-        }
+    }
     void rotate(vector<int>& nums, int k) {
-        long long n=(int)nums.size();
+        long long n=nums.size();
         k=k%n;
         if(k<0){
-k+=n;}
+            k+=n;
+        }
         reverse(nums,0,n-1);
         reverse(nums,0,k-1);
         reverse(nums,k,n-1);
-        
     }
 };
