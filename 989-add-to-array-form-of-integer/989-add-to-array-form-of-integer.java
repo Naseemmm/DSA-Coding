@@ -9,12 +9,12 @@ class Solution {
             num[i]=num[i]+k%10+c;
             a.add(num[i]%10);
             c=num[i]/10;
-            k=k/10;
+            k/=10;
         }
         k=k+c;
         while(k!=0)
         {
-           a.add(k%10);
+            a.add(k%10);
             k/=10;
         }
         Collections.reverse(a);
