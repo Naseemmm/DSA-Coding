@@ -14,13 +14,12 @@ class Solution {
         int maxYear=1950;
         for(int i=0;i<101;i++)
         {
-          if(maxValue<a[i])
-          {
-              maxValue=a[i];
-              maxYear=i+1950;
-          }
+            if(maxValue<a[i])
+            {
+                maxValue=a[i];
+                maxYear=i+1950;
+            }
         }
-        return maxYear;
-       
+       return maxYear;
     }
 }
