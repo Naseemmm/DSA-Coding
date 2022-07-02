@@ -4,7 +4,7 @@ class Solution {
         for(int i=0;i<matrix.length;i++)
         {
             int minIndex=0;
-            int min=9999999;
+            int min=999999;
             for(int j=0;j<matrix[i].length;j++)
             {
                 if(min>matrix[i][j])
@@ -13,7 +13,6 @@ class Solution {
                     minIndex=j;
                 }
             }
-        
             boolean isTrue=true;
             for(int j=0;j<matrix.length;j++)
             {
