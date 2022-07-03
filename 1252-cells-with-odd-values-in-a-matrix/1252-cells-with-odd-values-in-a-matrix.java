@@ -1,27 +1,27 @@
 class Solution {
     public int oddCells(int m, int n, int[][] indices) {
-        int[][] a=new int[m][n];
+      boolean[] row=new boolean[m];
+      boolean[] col=new boolean[n];
         for(int i=0;i<indices.length;i++)
         {
-            for(int j=0;j<n;j++)
+         row[indices[i][0]]^=true;
+         col[indices[i][1]]^=true;
+            
+        }
+        int r=0,c=0;
+        for(int i=0;i<m;i++)
+        {
+            if(row[i])
             {
-                a[indices[i][0]][j]++;
-            }
-            for(int j=0;j<m;j++)
-            {
-                a[j][indices[i][1]]++;
+                r++;
             }
         }
-            int count=0;
-            for(int i=0;i<m;i++)
+        for(int i=0;i<n;i++){
+            if(col[i])
             {
-                for(int j=0;j<n;j++)
-                {
-                    if(a[i][j]%2!=0)
-                        count++;
-                }
+                c++;
             }
-        
-        return count;
+        }
+        return (r*n+c*m-2*r*c);
     }
 }
