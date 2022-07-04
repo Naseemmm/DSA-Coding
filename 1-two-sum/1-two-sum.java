@@ -4,9 +4,9 @@ class Solution {
         {
             for(int j=i+1;j<nums.length;j++)
             {
-                int n=target-nums[i];
-                if(nums[j]==n)
-                    return new int[]{i,j};
+                if(nums[i]+nums[j]==target)
+                    return new int[] {i,j};
+                
             }
         }
         return nums;
