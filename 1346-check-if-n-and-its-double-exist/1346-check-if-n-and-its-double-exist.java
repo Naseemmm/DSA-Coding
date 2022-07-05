@@ -1,14 +1,13 @@
 class Solution {
     public boolean checkIfExist(int[] arr) {
+        Map<Double,Integer>map=new HashMap<>();
         for(int i=0;i<arr.length;i++)
         {
-            for(int j=0;j<arr.length;j++)
+            if(map.containsKey((double)arr[i]*2)||map.containsKey((double)arr[i]/2))
             {
-                if(i!=j&&arr[i]==arr[j]*2)
-                {
-                    return true;
-                }
-            }
+                return true;
+        }
+            map.put((double)arr[i],1);
         }
         return false;
     }
