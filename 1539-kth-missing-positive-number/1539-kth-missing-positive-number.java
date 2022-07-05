@@ -6,17 +6,16 @@ class Solution {
            return k;
        }
        
-       int num = k;
        
-       for (int i : arr) {
-           if (i <= num) {
-               num++;
-           } else {
-               break;
+       for (int i = 1; i <= arr.length; i++) {
+           if ( arr[i-1] - i >= k) {
+               
+               return i + k - 1; 
            }
        }
        
-       return num;
+       
+       return k + arr.length;
 
+   }
     }
-}
