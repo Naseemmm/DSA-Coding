@@ -3,6 +3,4 @@ class Solution {
         
       return String.join("",word1).equals(String.join("",word2));
     }
-   
-    }
-    
+}
