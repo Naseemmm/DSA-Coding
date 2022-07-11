@@ -14,7 +14,7 @@ class Solution {
         {
             if(i<name.length() && name.charAt(i)==typed.charAt(j))
                 i++;
-            else if( j==0 || typed.charAt(j)!=typed.charAt(j-1))
+            else if(j==0 || typed.charAt(j)!=typed.charAt(j-1))
                 return false;
             j++;
         }
