@@ -16,15 +16,15 @@ class Solution {
                 {
                     return false;
                 }
-                if(c==']'&& !st.isEmpty()&& st.peek()!='[')
+                if(c==']'&& st.peek()!='[')
             {
                return false;
             }
-            if(c=='}'&&!st.isEmpty()&&st.peek()!='{')
+            if(c=='}'&&st.peek()!='{')
             {
                 return false;
             }
-              if(c==')' && !st.isEmpty()&&st.peek()!='(')
+              if(c==')' &&st.peek()!='(')
             {
                return false;
             } 
