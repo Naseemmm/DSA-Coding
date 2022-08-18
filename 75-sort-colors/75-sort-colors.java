@@ -24,9 +24,9 @@ class Solution {
                     }
                 case 2:
                     {
-                        temp=nums[mid];
-                        nums[mid]=nums[high];
-                        nums[high]=temp;
+                        temp=nums[high];
+                        nums[high]=nums[mid];
+                        nums[mid]=temp;
                         high--;
                         break;
                     }
