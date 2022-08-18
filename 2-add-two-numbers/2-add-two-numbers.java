@@ -14,7 +14,7 @@ class Solution {
         ListNode temp=dummy;
         int carry=0;
         while(l1!=null || l2!=null || carry==1)
-        {int sum=0;
+        {   int sum=0;
             if(l1!=null)
             {
              sum+=l1.val;
