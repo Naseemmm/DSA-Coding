@@ -1,10 +1,10 @@
 class Solution {
     public int singleNonDuplicate(int[] nums) {
-       int c=0;
-        for(int i=0;i<nums.length;i++)
+       int k=0;
+        for(int i:nums)
         {
-            c=c^nums[i];
+            k=k^i;
         }
-        return c;
+        return k;
     }
 }
