@@ -24,7 +24,7 @@ class Solution {
         while(!s1.isEmpty())
         {
             root=s1.pop();
-            s2.add(root);
+            s2.push(root);
             if(root.left!=null)
                 s1.push(root.left);
             if(root.right!=null)
