@@ -14,34 +14,26 @@
  * }
  */
 class Solution {
-    
-    public List<List<Integer>> levelOrder(TreeNode node) {
-        List<List<Integer>> list = new ArrayList<List<Integer>>();
-        
-        Queue<TreeNode> curr  = new ArrayDeque< >();;
-        Queue<TreeNode> next  = new ArrayDeque<>();
-        if(node==null) return list;  //null pointer exception
-        curr.add(node);
-        while(curr.size()>0){
-            List<Integer> level = new ArrayList<Integer>();
-            int size =  curr.size();
-            for(int i=0;i<size;i++){
-                
-            
-            TreeNode rem = curr.remove();
-            level.add(rem.val);
-            
-            if(rem.left!=null) next.add(rem.left);
-            if(rem.right!=null) next.add(rem.right);
+    public List<List<Integer>> levelOrder(TreeNode root) {
+         List<List<Integer>>a=new ArrayList<>();
+          Queue<TreeNode>q=new LinkedList<>();
+        if(root==null) return a;
+        q.offer(root);
+        while(!q.isEmpty())
+        {
+            int levelNum=q.size();
+            List<Integer>b=new ArrayList<>();
+            for(int i=0;i<levelNum;i++)
+            {
+                if(q.peek().left!=null)
+                    q.offer(q.peek().left);
+                if(q.peek().right!=null)
+                    q.offer(q.peek().right);
+                b.add(q.poll().val);
             }
-            if(curr.size()==0){
-                Queue<TreeNode> temp  = curr;
-                curr= next;
-                next= temp;
-            }
-            list.add(level);
+            a.add(b);
         }
-        return list;
+        return a;
         
     }
 }
