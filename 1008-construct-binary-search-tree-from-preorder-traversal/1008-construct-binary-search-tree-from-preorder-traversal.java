@@ -15,7 +15,7 @@
  */
 class Solution {
     public TreeNode bstFromPreorder(int[] A) {
-        return bstFromPreorder(A, Integer.MAX_VALUE, new int[]{0});
+        return bstFromPreorder(A, Integer.MAX_VALUE, new int[1]);
     }
 
     public TreeNode bstFromPreorder(int[] A, int bound, int[] i) {
