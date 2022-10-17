@@ -37,31 +37,27 @@ class GFG {
 
 class Solution {
     public boolean canPair(int[] nums, int k) {
-       
       HashMap<Integer,Integer>map=new HashMap<>();
-      for(int i=0;i<nums.length;i++)
+      for(int val:nums)
       {
-          int rem=nums[i]%k;
-          map.put(rem,map.getOrDefault(rem,0)+1);
+          int rem=val%k;
+          int fq=map.getOrDefault(rem,0);
+          map.put(rem,fq+1);
       }
       for(int val:nums)
       {
           int rem=val%k;
           if(rem==0)
           {
-            int fq=map.getOrDefault(rem,0);
-            if(fq%2==1)
-            {
-                return false;
-            }
+          int fq=map.getOrDefault(rem,0);
+          if(fq%2==1)
+             return false;
           }
           else if(2*rem==k)
           {
-              int fq=map.get(rem);
+              int fq=map.getOrDefault(rem,0);
               if(fq%2==1)
-                {
-                    return false;
-                }
+                return false;
           }
           else
           {
