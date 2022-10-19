@@ -26,16 +26,14 @@ class GFG {
 
 class Solution {
     String removeDups(String S) {
-        HashSet<Character>map=new HashSet<>();
-       String s="";
-       for(int i=0;i<S.length();i++)
+       HashSet<Character>set=new HashSet<>();
+       String a="";
+       for(char c:S.toCharArray())
        {
-           if(!map.contains(S.charAt(i)))
-           {
-               s+=S.charAt(i);
-               map.add(S.charAt(i));
-           }
+           if(!set.contains(c))
+              a+=c;
+              set.add(c);
        }
-       return s;
+       return a;
     }
 }
